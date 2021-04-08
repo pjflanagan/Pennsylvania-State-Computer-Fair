@@ -1,0 +1,345 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<!--[if !mso]>
+<style>body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+h3 { font-size: 12pt }
+h4 { font-size: 10pt }
+</style>
+<![endif]-->
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg')" style="background-color: #000000" background="Background2.jpg">
+
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="800" height="562" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75" background="TopBar.jpg">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black" size="7" color="#FFFFFF">
+Importance</font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8; fp-font-color-hover: #FF0000; fp-font-color-press: #FF0000" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6; fp-font-color-hover: #FF0000; fp-font-color-press: #FF0000" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6; fp-font-color-hover: #FF0000; fp-font-color-press: #FF0000" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6; fp-font-color-hover: #FF0000; fp-font-color-press: #FF0000" fp-title="Math"></a><p>
+			<img border="0" src="ImportanceButton.jpg" width="100" height="20"><p>
+			&nbsp;<p>
+			&nbsp;<p>&nbsp;</td>
+			<td valign="top" width="516" bordercolor="#FF0000" style="border-style: solid; border-width: 1px">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+	<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+		<sup goog_docs_charIndex="69">
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8321">&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8321">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8322">
+		<font size="3" goog_docs_charIndex="8323">Fractal geometry is very 
+		important to the twenty-first century. Fractal geometry helps in medical 
+		research, designed chips in cell phones, animates movies, and is being 
+		applied to more and more concepts daily.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8536">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8537">
+		<font size="3" goog_docs_charIndex="8538">&nbsp;</font></span></p>
+		<h3 style="text-align: justify; margin: 0pt" goog_docs_charIndex="8543">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8544">
+		<font goog_docs_charIndex="8546" size="4">Movie Animations/ Effects</font></span></h3>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8576">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8577">
+		<font size="3" goog_docs_charIndex="8578">Before people knew about 
+		fractal geometry animated movies were made by hand. People would draw a 
+		character, and draw him in a new position, and then another. The result 
+		would be like a flipbook. When animations came out they were really 
+		pathetic looking and hard to make.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8853">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8854">
+		<font size="3" goog_docs_charIndex="8855">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="8860">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8861">
+		<font size="3" goog_docs_charIndex="8862">A man named</font></span><span style="COLOR: #333333; FONT-FAMILY: 'Arial'" goog_docs_charIndex="8876"><font size="3" goog_docs_charIndex="8877"> 
+		Loren Carpenter</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8896"><font size="3" goog_docs_charIndex="8897"> 
+		was working for </font></span>
+		<span style="COLOR: #333333; FONT-FAMILY: 'Arial'" goog_docs_charIndex="8917">
+		<font size="3" goog_docs_charIndex="8918">Boeing airlines</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8936"><font size="3" goog_docs_charIndex="8937"> 
+		when the company decided to animate planes flying. Carpenter wanted the 
+		planes to fly over mountains, but he had no way of doing that with the 
+		computer graphics. That was when he learned about fractal geometry and 
+		how it described nature. He decided to use fractal geometry’s concepts 
+		that to make mountains on his computer.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9266">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9267">
+		<font size="3" goog_docs_charIndex="9268">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9273">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9274">
+		<font size="3" goog_docs_charIndex="9275">First Carpenter would draw a 
+		triangle. Then he would take that triangle and cut it into four 
+		triangles, and on each of the other triangles he would cut that into 
+		four, and so on. Soon he could make a realistic mountain range for a 
+		plane to fly through. Carpenter then moved on to make entire computer 
+		sequences for the movie </font></span>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9603">
+		<i goog_docs_charIndex="9604"><font size="3" goog_docs_charIndex="9605">
+		Star Trek</font></i></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9618"><font size="3" goog_docs_charIndex="9619">,</font></span><font face="Arial">
+		</font>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9624">
+		<font size="3" goog_docs_charIndex="9625">which was the first Hollywood 
+		film to use an entirely computer generated sequence</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9709"><i goog_docs_charIndex="9710"><font size="3" goog_docs_charIndex="9711">.</font></i></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9273">
+		&nbsp;</p>
+		</sup>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="9273">
+		<font face="Arial">
+		<a href="http://www.complang.tuwien.ac.at/alex/vistapro-pics.html">
+		<img border="0" src="20070514172628!Animated_fractal_mountain.gif" width="355" height="195"></a></font></p>
+		<sup goog_docs_charIndex="69">
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="9273">
+		&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: left" goog_docs_charIndex="9273">
+		&nbsp;</p>
+		<div style="margin-top: 0px; margin-bottom: 0px">
+			<h3 style="text-align: justify; margin: 0pt">
+			<span style="FONT-FAMILY: 'Arial'"><font size="4">
+			<span style="background-color: #FFFFFF">Video Data</span></font></span></h3>
+			<h3 style="FONT-WEIGHT: normal; MARGIN: 0pt; TEXT-ALIGN: justify">
+			<span style="FONT-FAMILY: 'Arial'; TEXT-DECORATION: none">
+			<font size="3"><span style="background-color: #FFFFFF">Before 
+			fractal geometry video software had to memorize image after image in 
+			order to play a film. Software that uses fractal properties helped 
+			make video files take up less data space. It did this by finding 
+			pixel squares that matched other pixel squares. It would memorize 
+			just those set of pixels and their placement on the screen. Now 
+			instead of software memorizing a whole image it will only memorize 
+			parts of it.</span></font></span></h3>
+		</div>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: left" goog_docs_charIndex="9273">
+		<font face="Arial">
+		<img border="0" src="FractalSpaceInvader.jpg" width="399" height="266"></font></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9717">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9718">
+		<font size="3" goog_docs_charIndex="9719">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9724">
+		<span style="font-family: Arial; font-weight: 700" goog_docs_charIndex="9725">
+		<font size="4" goog_docs_charIndex="9727">Cell Phones</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="9743">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="9744">
+		<font size="3" goog_docs_charIndex="9745">A hand radio owner named 
+		Nathan Cohen was having difficulty with signals. His radio could only 
+		get a few frequencies and his large satellite dish was making his 
+		landlord upset. After Cohen went to a speech given by Mandelbrot and 
+		there he learned about fractals he had a solution. He decided to make an 
+		antenna in the shape of the Koch Curve, and amazingly it worked the 
+		first time he used it. Cohen found that antennas could be smaller and 
+		more efficient when they showed fractal patterns.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="10239">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="10240">
+		<font size="3" goog_docs_charIndex="10241">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="10246">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="10247">
+		<font size="3" goog_docs_charIndex="10248">Cohen discovered this around 
+		the time when cell phone companies started to offer their costumers 
+		products like Wi-Fi, Bluetooth, and Push to Talk. The problem was that 
+		each of the different services ran off of different frequencies. To 
+		solve this cell phones needed to have an antenna for each frequency, or 
+		cell phones could use fractal chips.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="10596">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="10597">
+		<font size="3" goog_docs_charIndex="10598">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="10603">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="10604">
+		<font size="3" goog_docs_charIndex="10605">Cell phones now have little 
+		chips inside of them that receive calls, access Internet, and allow for 
+		Bluetooth. These chips are shaped like fractals. The chips allow phones 
+		to use each different frequency without having ten different antennas. 
+		This is because the chips show self-similarity, which allow it to work 
+		better.</font></span></p>
+		</div>
+			</blockquote><sup goog_docs_charIndex="69">
+			<div dir="ltr">
+				<blockquote style="BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: medium none; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-TOP: 0px; BORDER-BOTTOM: medium none">
+					<p style="text-align: left; margin: 0pt">&nbsp;</p>
+					<p style="text-align: justify; margin-left:0pt; margin-right:50px; margin-top:0pt; margin-bottom:0">
+					<span style="font-family: Arial"><font size="4">
+					<span style="BACKGROUND-COLOR: rgb(255,255,255)"><b>
+					<font color="#000000">Astronomy</font></b></span></font></span></p>
+					<p style="text-align: justify; margin-left:0pt; margin-right:50px; margin-top:0pt; margin-bottom:0">
+					<span style="FONT-FAMILY: Arial"><font size="3">
+					<span style="background-color: rgb(255,255,255)">
+					<font color="#000000"><strong>&nbsp;</strong>Fractal geometry can 
+					be used to explain how the stars are dispersed and how the 
+					planets behave.</font></span></font></span></p><b>
+					<font color="#000000">
+					<p align="justify" style="margin-right: 50px; margin-bottom: 0">
+					<font face="Arial" size="4">Stock Market</font></font></b></p>
+					<p align="justify" style="margin-right: 50px; margin-bottom: 0">
+					<sup goog_docs_charIndex="69"><sup goog_docs_charIndex="69">
+					<span style="font-family: Arial; background-color: rgb(255,255,255)">
+					<font color="#000000">The<font size="3"> stock market goes 
+					up and down and changes constantly. The patterns of the 
+					stock market are hard to explain mathematically and are even 
+					harder to predict changes in. Fractal geometry can help 
+					describe it.</font></font></span></sup></sup></p>
+				</blockquote>
+			</div>
+		</sup>
+		</sup>
+			<blockquote>
+	<sup goog_docs_charIndex="69">
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="11239">
+	<span style="font-family: Arial; font-weight: 700" goog_docs_charIndex="11240">
+	<font size="4" goog_docs_charIndex="11242">Concrete</font></span></p>
+	<p style="MARGIN: 0pt 0pt 12pt; TEXT-ALIGN: justify" goog_docs_charIndex="11255">
+	<span style="color: #333333; font-family: Arial" goog_docs_charIndex="11256">
+	<font size="3" goog_docs_charIndex="11257">Before, concrete dissolved 
+		when water came through. Then at a conference on fractal applications in 
+		2004, a speaker introduced an new type of concrete that is stronger, 
+		durable, and based off of fractals.</font></span></p>
+	<h4 style="text-align: justify; margin: 0pt" goog_docs_charIndex="11465">
+	<span style="COLOR: #333333; FONT-FAMILY: 'Arial'" goog_docs_charIndex="11466">
+	<font size="4" goog_docs_charIndex="11468">Sound Blocking Walls</font></span></h4>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="11493">
+	<span style="COLOR: #333333; FONT-FAMILY: 'Arial'" goog_docs_charIndex="11494">
+	<font size="3" goog_docs_charIndex="11495">Highway noise is a problem 
+		for people living near them. The flat walls designed to soften the noise 
+		were useless, because the noise that hit them bounced off and made 
+		things worse. Then a wall was created with a fractal surface. Now the 
+		noise is absorbed not moved.</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="11764">
+	<span style="COLOR: #333333; FONT-FAMILY: 'Arial'" goog_docs_charIndex="11765">
+	<font size="3" goog_docs_charIndex="11766">&nbsp;</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="11771">&nbsp;</p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="11792">
+	<span style="FONT-WEIGHT: normal; FONT-FAMILY: 'Arial'" goog_docs_charIndex="11793">
+	<font goog_docs_charIndex="11794">Fractal Geometry has effected 
+		the twenty first century. It is continually applied to more subjects. It 
+		is really important form mathematics and is worth studying. In the 
+		future technology may see much advancement because of fractal geometry. 
+		There is no telling what can be done with math.</font></span><p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="11792">&nbsp;<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="11792">
+	</sup>
+			</blockquote>
+			</td>
+			<td valign="top" height="433" width="174">
+			<!-- MSCellType="NavBody2" -->
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="center">
+<font face="Arial" size="2">
+<img border="0" src="694px-Star_Wars_Logo_svg.png" width="144" height="114"></font></p>
+			<p align="left">
+&nbsp;</p>
+			<p align="center">
+<font face="Arial" size="2">Movies like <i>Star Wars</i> were animated using properties of fractals.</font></p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="left">
+&nbsp;</p>
+			<p align="center">
+			<img border="0" src="CellPhoneFractal.gif" width="173" height="268"><p align="center">
+			<font face="Arial" size="2">A chip in your cell phone that has a fractal shape 
+			allows for it to make calls.</font><p align="left">&nbsp;<p align="left">&nbsp;<p align="left">&nbsp;<p align="left">&nbsp;<p align="left">&nbsp;<p align="left">&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50" background="TopBar.jpg">
+			<!-- MSCellType="ContentFoot" -->
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

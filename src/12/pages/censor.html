@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Censor</title>
+<style>
+* { margin: 0; padding: 0;}
+body {
+	font-family:"Courier New", Courier, monospace;	
+}
+p {
+	margin-left:30px;	
+}
+a {
+	color:#000;
+	font-weight:bold;
+	text-decoration: none;
+}
+@font-face {
+    font-family: "SourceCodePro";
+    src: url("SourceCodePro-Semibold.ttf.woff");
+}
+</style>
+
+</head>
+
+<body>
+<br /><br /><br /><br />
+
+<p>"We are <a href="http://en.wikipedia.org/wiki/Anonymous_(group)" onmouseover"censor(0);" onmouseout="clear();">Anonymous</a>. We are Legion.</p>
+<p>We do not forgive. We do not forget.</p>
+<p>Expect us."</p>
+<p>&nbsp;-Anonymous</p>
+
+<br />
+
+<p>"This is another quote that I'm sure will</p>
+<p>look great when it prints out on the screen.</p>
+<p>Look at that, I'm so happy that this works!"</p>
+<p>&nbsp;-Peter</p>
+
+<br />
+
+<p>"The Internet empowers everyone to speak,</p>
+<p>create, learn, and share. It is controlled</p>
+<p>by no single organization, individual, or</p>
+<p>government. It connects the world, and we</p>
+<p>should protect it."</p>
+<p>&nbsp;-<a href="http://www.google.com" onmouseover="censor();" onmouseout="clear(1);">Google</a></p>
+
+<script>
+
+function censor(n){
+	var href = document.getElementsByTagName("a")[n],
+		phrase = href.innerHTML,
+		len = phrase.text().length,
+		a = atan(len/20);
+	href.innerHTML = len;
+}
+
+function clear(){
+	
+}
+
+</script>
+</body>
+</html>

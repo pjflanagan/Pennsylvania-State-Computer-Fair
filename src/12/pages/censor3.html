@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Censor</title>
+<style>
+* { margin: 0; padding: 0;}
+::selection {
+	background: #000; /* Safari */
+	}
+::-moz-selection {
+	background: #000; /* Firefox */
+}
+body {
+	font-family:"Courier New", Courier, monospace;	
+	font-size:18px;
+}
+p {
+	margin-left:30px;	
+}
+a {
+	color:#000;
+	font-weight:bold;
+	text-decoration: none;
+}
+@font-face {
+    font-family: "SourceCodePro";
+    src: url("SourceCodePro-Semibold.ttf.woff");
+}
+#bar {
+	position:fixed;
+	background:#000;
+	left:100px;
+	top:100px;
+	height:20px;
+	pointer-events: none;
+	display:none;
+}
+ruler {
+	position:fixed;
+	background:#000;
+	left:500px;
+	top:250px;
+	width:100px;
+	height:10px;
+}
+</style>
+
+</head>
+
+<body>
+<div id="bar"></div>
+<ruler></ruler>
+<br /><br /><br /><br />
+
+<p>"We are <a href="http://en.wikipedia.org/wiki/Anonymous_(group)">Anonymous</a>. We are Legion.</p>
+<p>We do not forgive. We do not forget.</p>
+<p>Expect us."</p>
+<p>&nbsp;-Anonymous</p>
+
+<br />
+
+<p>"This is another quote that I'm sure will</p>
+<p>look <a>great when it prints out on the</a> screen.</p>
+<p>Look at that, I'm so happy that this works!"</p>
+<p>&nbsp;-Peter</p>
+
+<br />
+
+<p>"The Internet empowers everyone to speak,</p>
+<p>create, learn, and share. It is controlled</p>
+<p>by no single organization, individual, or</p>
+<p>government. It connects the world, and we</p>
+<p>should protect it."</p>
+<p>&nbsp;-<a href="http://www.google.com">Google</a></p>
+
+<script>
+
+const FONT_SIZE = 18;
+
+function rando(min,max){
+	//if(min<0) max*=2;
+	var dir = (Math.random()>.5) ? 1 : -1;
+	var val = Math.floor(Math.random()*max)+min;
+	if(val < 2 && val > -2) return rando(min,max);
+	return val * dir;	
+}
+
+/*
+var len,
+	refreshId;
+var l = 0
+function drawBar(){
+	if(l>=len){
+		clearInterval(refreshId);
+		l = 0;
+	}
+	else{
+		$("#bar").css("width",l);
+		l++;
+	}
+}
+*/
+
+$("a").hover(
+	function() {
+		//var phrase = $(this).text();
+		var offset = rando(3,7);
+		var len = $(this).width() + offset,
+			x = $(this).position().left -offset,
+			y = $(this).position().top - rando(1,4),
+			a = Math.atan(FONT_SIZE/len)*57.2957795*3/4;
+			
+		//var str = "<span>:"+ len +" ("+x+","+y+") </span> ";
+		//$( this ).append( $( str ) );
+		
+		var b = $("#bar");
+		b.css("left",x);
+		b.css("top",y);
+		b.css("-webkit-transform", "rotate(" + rando(0,a) + "deg)");
+		b.css("display","block");
+		//refreshId = setInterval(drawBar,17);
+		b.css("width",len);
+	},
+	function() {
+		$("#bar").css("display","none");
+	}
+);
+ 
+</script>
+</body>
+</html>

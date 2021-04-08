@@ -1,0 +1,258 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg')" style="background-color: #000000" background="Background2.jpg">
+
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="800" height="2047" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75" background="TopBar.jpg">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black" size="7" color="#FFFFFF">
+Math</font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="101">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<img border="0" src="MathButton.jpg" width="100" height="20"><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			&nbsp;<p>
+			&nbsp;<p>&nbsp;</td>
+			<td valign="top" width="556" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+	&nbsp;<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+		<sup goog_docs_charIndex="69">
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="4534">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="4535">
+		<font size="3" goog_docs_charIndex="4536">Fractal is a term coined in 
+		1975 by fractal geometry's founder, Benoit Mandelbrot. He took it from 
+		the Latin word “fractus”, meaning broken. Fractals are geometric images 
+		that are self-similar at all scales, infinitely precise and describe 
+		nature. Fractals are graphed using very simple formulas that are 
+		iterated over and over on a complex plane. The result is very 
+		complicated images, which repeat themselves as you zoom in on it. These 
+		cannot be created using classical geometry.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5022">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5023">
+		<font size="3" goog_docs_charIndex="5024">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5029">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5030">
+		<font size="3" goog_docs_charIndex="5031">The definition of a fractal is 
+		very strange. To understand it you need to know what self-similarity is, 
+		what makes something infinitely precise, and why this describes nature.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5210">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5211">
+		<font size="3" goog_docs_charIndex="5212">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5217">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5218">
+		<font size="3" goog_docs_charIndex="5219">If you look at the M set you 
+		see the beetle-like heart shape. As you zoom in you find this shape 
+		again, and again, and again. The figure reappears within itself. 
+		Fractals repeat over and over like this, and like nature does. For 
+		instance if you look at a cloud, it looks like itself if you zoom in 
+		closer at the cloud. Nature and fractals are self-similar.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5579">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5580">
+		<font size="3" goog_docs_charIndex="5581">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="5586">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="5587">
+		<font size="3" goog_docs_charIndex="5588">
+		<img border="0" src="KochCurveChart.jpg" width="297" height="149" align="right">Fractals are infinitely 
+		precise. As you zoom in on the M set you find that the black-beetle 
+		shape has many ridges, and corners. The border of the M set is infinite. 
+		You will always be able to find more, and rougher edges that seem 
+		imposable to measure. Like in nature, you cannot measure the surface 
+		area of a tree. This is because you will have to measure each ridge of 
+		the tree, and each dent on each ridge, and each rough edge of each dent, 
+		and so on. Fractals are needed to measure something that is infinitely 
+		precise like nature.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6127">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6128">
+		<font size="3" goog_docs_charIndex="6129">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6134">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6135">
+		<font size="3" goog_docs_charIndex="6136">To know how they are graphed 
+		you need to understand the complex plane. A complex plane is like a 
+		coordinate plane, but the “y” axis is called the imaginary axis, and the 
+		“x” axis is called the real axis. On the imaginary axis are plotted all 
+		the imaginary numbers. So in the formula c=6+2</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6427"><i goog_docs_charIndex="6428"><font size="3" goog_docs_charIndex="6429">i</font></i></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6434"><font size="3" goog_docs_charIndex="6435">, 
+		point c would be found +6 places on the real axis and +2 places on the 
+		imaginary axis. (See animation below)</font></span></p>
+		<p style="text-align: center; margin: 0pt" goog_docs_charIndex="6134">
+		<img border="0" src="Complex.gif" width="418" height="288"></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6527">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6528">
+		<font size="3" goog_docs_charIndex="6529">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6534">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6535">
+		<font size="3" goog_docs_charIndex="6536">The complex plane allows the M 
+		Set to be graphed. Using the formula z</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6608"><sub goog_docs_charIndex="6609"><font size="1" goog_docs_charIndex="6610">1</font></sub></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6615"><font size="3" goog_docs_charIndex="6616">=z</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6621"><sup goog_docs_charIndex="6622"><font size="1" goog_docs_charIndex="6623">2</font></sup></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6628"><font size="3" goog_docs_charIndex="6629">+c 
+		Mandelbrot created his set. He put the formula into a computer, iterated 
+		it over and over, and graphed each point on a complex plane. The result 
+		is an image made entirely of points, that are infinitely precise, 
+		self-similar at all scales, and describes nature.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6896">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6897">
+		<font size="3" goog_docs_charIndex="6898">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="6903">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="6904">
+		<font size="3" goog_docs_charIndex="6905">The points in the M Set are 
+		all black. This is because those points are finite, meaning when “c” is 
+		put back into the equation it oscillates. The colored points that wrap 
+		around the M Set do not belong to the M Set. They are infinite, meaning 
+		that when “c” is put back into the formula the results keep getting 
+		larger. They are colored based off of how fast they move towards 
+		infinity.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7294">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7295">
+		<font size="3" goog_docs_charIndex="7296">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7301">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7302">
+		<font size="3" goog_docs_charIndex="7303">Fractal geometry’s purpose is 
+		to use numbers to accurately describe nature. Fractals do this using 
+		fractal dimension. One dimension is the strait line, two dimensions is a 
+		plane, and three dimensions is a cube. Fractal dimension is between one, 
+		two, and three. Nature is measured using fractal dimension. For example 
+		the coastline of Britain is 1.25.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="7657">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7658">
+		<font size="3" goog_docs_charIndex="7659">&nbsp;</font></span><sup goog_docs_charIndex="69"><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7658"><font size="3" goog_docs_charIndex="7659"><img border="0" src="BOX%20CO.jpg" width="443" height="409"></font></span></sup></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7664">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7665"><font size="3" goog_docs_charIndex="7666">There are two to find fractal 
+		dimension. One is difficult and the other is simpler. The easier method 
+		is called “box counting.” It even sounds simple.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7820">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7821">
+		<font size="3" goog_docs_charIndex="7822">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7827">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="7828">
+		<font size="3" goog_docs_charIndex="7829">To use “box counting” first 
+		you take a fractal curve, such as a coastline, and you place a grid on 
+		top of it. Then count all the boxes that the curve goes through. (Lets 
+		say you count 27 boxes) Then you take a smaller grid and place that over 
+		the curve and count the boxes again. (Lets say you count 60 boxes) Then 
+		you plug them into a formula.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="7827">
+		&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8177">
+		&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8177">
+		&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8177">
+		<font face="Arial">log (length increase)/ log (scale factor)</font></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8177">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8178">
+		<font size="3" goog_docs_charIndex="8179">log(44) </font></span>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8193">
+		<font size="5" goog_docs_charIndex="8194">/</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8198"><font size="3" goog_docs_charIndex="8199"> 
+		log(4)</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8210">
+		<span style="font-family: Arial">2.72971581</span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="8211"><font size="3" goog_docs_charIndex="8212">…</font></span><p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8210">
+		&nbsp;<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="8210">
+		&nbsp;</sup></div>
+			</blockquote>
+			<p align="center">
+			<img border="0" src="Flower.jpg" width="404" height="275"><p align="center">
+			&nbsp;<p align="center">
+			&nbsp;</td>
+			<td valign="top" height="1918" width="133">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center"><font face="Arial" size="2">This graph is an 
+			example of how Fractals are infinitely precise.</font></p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center">&nbsp;</p>
+			<p align="center"><font face="Arial" size="2">Watch the&nbsp; complex plane 
+			animation at the left to learn about graphing.</font><p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">
+			<font face="Arial" size="2">This is a diagram showing the similarity 
+			between parts of a flower.</font></td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50" background="TopBar.jpg">
+			<!-- MSCellType="ContentFoot" -->
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

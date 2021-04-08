@@ -1,0 +1,179 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg')" style="background-color: #000000" background="Background2.jpg">
+`<script language="JavaScript">
+
+//Comment trail script- By Kurt (kurt.grigg@virgin.net)
+//Script featured on Dynamic Drive
+//Visit http://www.dynamicdrive.com for this script and more
+
+colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
+n = 10;
+y = 0;
+x = 0;
+n6=(document.getElementById&&!document.all);
+ns=(document.layers);
+ie=(document.all);
+d=(ns||ie)?'document.':'document.getElementById("';
+a=(ns||n6)?'':'all.';
+n6r=(n6)?'")':'';
+s=(ns)?'':'.style';
+if (ns){
+for (i = 0; i < n; i++)
+document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
+}
+if (ie)
+document.write('<div id="con" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+if (ie||n6){
+for (i = 0; i < n; i++)
+document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
+}
+if (ie)
+document.write('</div></div>');
+(ns||n6)?window.captureEvents(Event.MOUSEMOVE):0;
+function Mouse(evnt){
+y = (ns||n6)?evnt.pageY+4 - window.pageYOffset:event.y+4;
+x = (ns||n6)?evnt.pageX+1:event.x+1;
+}
+(ns)?window.onMouseMove=Mouse:document.onmousemove=Mouse;
+function animate(){
+o=(ns||n6)?window.pageYOffset:0;
+if (ie)con.style.top=document.body.scrollTop;
+for (i = 0; i < n; i++){
+var temp1 = eval(d+a+"dots"+i+n6r+s);
+
+randcolours = colours[Math.floor(Math.random()*colours.length)];
+(ns)?temp1.bgColor = randcolours:temp1.background = randcolours; 
+if (i < n-1){
+ var temp2 = eval(d+a+"dots"+(i+1)+n6r+s);
+ temp1.top = parseInt(temp2.top);
+ temp1.left = parseInt(temp2.left);
+ } 
+else{
+ temp1.top = y+o;
+ temp1.left = x;
+ }
+}
+setTimeout("animate()",10);
+}
+animate();
+// -->
+</script><p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="869" height="840" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75" background="TopBar.jpg">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black" size="7" color="#FFFFFF">
+Fractal Geometry</font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p>
+			<img border="0" src="FractalGeometryButton.jpg" width="100" height="20"></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Math"></a><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			&nbsp;<p>
+			&nbsp;<p>
+			&nbsp;<p>&nbsp;</td>
+			<td valign="top" width="627" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+	<div style="margin-top: 0px; margin-bottom: 0px">
+		<sup>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify">&nbsp;</p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+		<font size="4" face="Arial Narrow">Geometry is a 
+		very smooth subject. Lines are straight, circles are perfectly round, 
+		and planes are completely flat. This type of math works perfectly in the 
+		human world, but fails to describe nature. You cannot measure the 
+		surface area of a tree; the bark is too rough. The distance around a 
+		coastline cannot be measured either. It is too jagged and regular 
+		geometry cannot describe this type of pattern. The word geometry means, 
+		“earth measure” in Latin. However geometry is far from measuring the 
+		earth or anything naturally on the earth. We needed a new form of math 
+		to measure our earth.</font></p>
+		<p style="MARGIN: 0pt"><font size="4" face="Arial Narrow">&nbsp;</font></p>
+		<p style="MARGIN: 0pt"><font size="4" face="Arial Narrow">Nature has been with us since the 
+		beginning of time, but not until recently have we been able to associate 
+		math with it. Fractal geometry is a recent discovery that we can 
+		describe nature with.</font></sup></div>
+&nbsp;</blockquote>
+			<p align="center">
+			<img border="0" src="800px-Mandel_zoom_00_mandelbrot_set.jpg" width="498" height="302"></td>
+			<td valign="top" height="711" width="132">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50" background="TopBar.jpg">
+			<!-- MSCellType="ContentFoot" -->
+			<p align="center">&nbsp;</p>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

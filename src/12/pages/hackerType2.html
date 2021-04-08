@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Hacker Type</title>
+<style>
+* { margin: 0; padding: 0;}
+.blockquote {
+	display: block;
+	background: #000;
+	width: 600px;
+	height: 225px;
+}
+@font-face {
+    font-family: "SourceCodePro";
+    src: url("SourceCodePro-Semibold.ttf.woff");
+}
+</style>
+
+</head>
+
+<body>
+<canvas class="blockquote">
+	"We are Anonymous. We are Legion. *
+	 We do not forgive. We do not forget. *
+	 Expect us." *
+	      -Anonymous
+</canvas>
+<br />
+<canvas class="blockquote">
+	"This is another quote that I'm sure will *
+	 look great when it prints out on the screen.*
+	 Look at that, I'm so happy that this works!" *
+	      -Peter
+</canvas>
+<br />
+
+<canvas class="blockquote">
+	"The Internet empowers everyone to speak, *
+	 create, learn, and share. It is controlled *
+	 by no single organization, individual, or *
+	 government. It connects the world, and we *
+	 should protect it." *
+	      -Google
+</canvas>
+
+<script>
+window.onload = function(){
+	//You can put other code here
+	blockquote();
+}
+
+//window.addEventListener("mouseclick"){}
+
+function blockquote(){
+	j = 0;
+	
+	var canvas = document.getElementsByClassName("blockquote")[j];
+	var ctx = canvas.getContext("2d");
+	
+	var W = 600, H = 225;
+	canvas.width = W;
+	canvas.height = H;
+	
+	var i = 0;
+		x = 5, 
+		y = 50;
+	var phrase = canvas.innerHTML;
+
+	const FONT_SIZE = 20;
+	
+	function setup(){
+		canvas = document.getElementsByClassName("blockquote")[j];
+		ctx = canvas.getContext("2d");
+		
+		W = W, H = H;
+		canvas.width = W;
+		canvas.height = H;
+		
+		i = 0;
+		x = 5, 
+		y = 50;
+		phrase = canvas.innerHTML;
+		
+		refreshId = setInterval(animate,32);
+	}
+	
+	function drawBackground(){
+		ctx.globalCompositeOperation = "source-over";
+		ctx.fillStyle = "rgba(0, 0, 0, 1)";
+		ctx.fillRect(x-FONT_SIZE, y-FONT_SIZE, W, H);
+	}
+	
+	function writeWords(){
+		if(i>phrase.length || phrase.length==0){
+			j++;
+			clearInterval(refreshId);
+			setTimeout(setup,1000);
+		}
+		else {
+			var output = phrase.substr(0,i);
+			ctx.font = FONT_SIZE +"px SourceCodePro";
+			ctx.fillStyle = "#00FF00";
+			ctx.fillText(output, x, y);
+			
+			i++;
+			if(phrase.charAt(i) == "*" || i>phrase.length){
+				y+=(FONT_SIZE*4)/3;
+				phrase = phrase.substr(i+1);
+				i = 0;
+			}
+		}
+	}
+	
+	function animate(){
+		drawBackground();
+		writeWords();
+	}
+	
+	//MAIN
+	setup();
+}
+</script>
+</body>
+</html>

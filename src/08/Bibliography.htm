@@ -1,0 +1,699 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+h2 { font-size: 14pt }
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg', /*url*/'buttonD.jpg', /*url*/'buttonE.jpg', /*url*/'button18.jpg', /*url*/'button19.jpg')" style="background-color: #000000">
+
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="1057" height="1647" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><span style="font-family: American Typewriter"><b>
+<font color="#FF0000" face="Arial Black"><span style="font-size: xx-large">Bibl</span></font></b></span><span style="font-family: Arial Black"><b><i><font color="#FF0000"><span style="font-size: xx-large">i</span></font></i></b></span><font face="Arial Black"><span style="font-family: American Typewriter"><b><font color="#FF0000"><span style="font-size: xx-large">ograph</span></font><i><font color="#FF0000"><span style="font-size: xx-large">y</span></font></i></b></span><font size="7" color="#FF0000">
+</font></font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Math"></a><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			<a href="Dictionary.htm">
+			<img border="0" id="img7" src="buttonC.jpg" height="20" width="100" alt="Dictionary" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'buttonD.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'buttonC.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'buttonE.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'buttonD.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Dictionary"></a><p>
+			<a href="Bibliography.htm">
+			<img border="0" id="img8" src="buttonF.jpg" height="20" width="100" alt="Bibliography" onmouseover="FP_swapImg(1,0,/*id*/'img8',/*url*/'button18.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img8',/*url*/'buttonF.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img8',/*url*/'button19.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img8',/*url*/'button18.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Bibliography"></a></td>
+			<td valign="top" width="943" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+<div id="sites-chrome-everything0" style="direction: ltr">
+	<div id="sites-chrome-page-wrapper0">
+		<div id="sites-chrome-page-wrapper-inside0">
+			<div id="sites-chrome-main-wrapper0">
+				<div id="sites-chrome-main-wrapper-inside0">
+					<table class="sites-layout-hbox" id="sites-chrome-main" cellSpacing="0" width="863">
+						<tr>
+							<td id="sites-canvas-wrapper">
+							<div id="sites-canvas">
+								<div class="sites-canvas-main" id="sites-canvas-main">
+									<div id="sites-canvas-main-content">
+										<div class="sites-layout-name-right-sidebar-hf sites-layout-vbox" xmlns="http://www.w3.org/1999/xhtml">
+											<table class="sites-layout-hbox" cellSpacing="0">
+												<tr>
+													<td class="sites-layout-tile sites-tile-name-content-1" width="844">
+													<div dir="ltr">
+														<blockquote style="border-style: none; margin-left: 40px; margin-right: 0px; margin-top: 0px; margin-bottom: 0px; padding: 0px">
+															<p style="margin-left: 0.5in">&nbsp;</p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q&nbsp;&nbsp; &nbsp;&quot;Wikipedia.&quot;&nbsp;</font><i><font face="Arial" color="#000000" size="1">Wikipedia</font></i><font face="Arial" color="#000000" size="1">. 
+															N.p., n.d. Web. 10 
+															Feb. 2010. &lt;http://www.wikipedia.com&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Andersen, Erling. 
+															&quot;Cool math - Fractal 
+															generator - Make 
+															your own fractals!.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															Cool math .com - An 
+															amusement park of 
+															math and more! Math 
+															lessons, math </font>
+															</u>
+															<font face="Arial" color="#000000" size="1">
+															. 31 Oct. 2009 
+															&lt;http://www.coolmath.com/fractals/fractalgenerators/generator1/index.html&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Complex Plane -- 
+															from Wolfram 
+															MathWorld.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															Wolfram MathWorld: 
+															The Web's Most 
+															Extensive 
+															Mathematics Resource</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://mathworld.wolfram.com/ComplexPlane.html&gt;&nbsp;</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Coolmath4kids - 
+															Fractals ( Geometry 
+															).&quot; </font><u>
+															<font face="Arial" color="#000000" size="1">
+															Cool math 4 kids - 
+															math games, math 
+															puzzles, math 
+															lessons - designed 
+															for </font></u>
+															<font face="Arial" color="#000000" size="1">
+															. 31 Oct. 2009 
+															&lt;http://www.coolmath4kids.com/fractals.html&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Cynthia Lanius' 
+															Lessons: A Fractals 
+															Lesson - 
+															Introduction.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															Department of 
+															Mathematics at Rice 
+															University</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://math.rice.edu/~lanius/frac/&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Dewey, David. 
+															&quot;Introduction to the 
+															Mandelbrot Set.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															David Dewey's page</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.ddewey.net/mandelbrot/&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Fractal Formulas 
+															Researched.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															Lifesmith Classic 
+															Fractals Home</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.lifesmith.com/formulas.html&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Fractal eXtreme: 
+															The Mandelbrot Set.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															Welcome to the 
+															Fractal eXtreme Web 
+															Site</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.cygnus-software.com/gallery/mandelbrot.htm&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Fractals, Fractal 
+															Geometry &amp; Chaos: 
+															Some Limits on 
+															Empiricism.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															www.people.vcu.edu</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.people.vcu.edu 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Java Fractal 
+															Generator and 
+															Introduction to 
+															Fractal 
+															Mathematics.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															Designer T-Shirts @ 
+															UtopianSky.com</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.utopiansky.com/labratory/fractals/&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Mandelbrot, Benoît 
+															B.. &quot;The fractal 
+															geometry of nature - 
+															Google Books.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															Google Books</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://books.google.com/books 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;NOVA | Hunting the 
+															Hidden Dimension | 
+															PBS.&quot; </font><u>
+															<font face="Arial" color="#000000" size="1">
+															PBS</font></u><font face="Arial" color="#000000" size="1">. 
+															30 Oct. 2009 
+															&lt;http://www.pbs.org/wgbh/nova/fractals/&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Neave Fractal 
+															...zoom in on the 
+															Mandelbrot set.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															Neave.com ...the 
+															interactive 
+															playground of Paul 
+															Neave</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.neave.com/fractal/&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Peano Space-Filling 
+															Curves.&quot; </font><u>
+															<font face="Arial" color="#000000" size="1">
+															Directory Search 
+															Results | CSAIL</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://people.csail.mit.edu/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Plexus.&quot; </font><u>
+															<font face="Arial" color="#000000" size="1">
+															Plexus</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.plexusinstitute.org/news-events/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Sequence, a 
+															Geometric. &quot;The 
+															Complex Plane.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															DSPRelated.com</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.dsprelated.com/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;YouTube - Bruce 
+															Lipton - Fractal 
+															Geometry.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=JHBD8pc8XMI&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;YouTube - Jump into 
+															Mandelbrot set.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=78xo0CE52Dk&amp;feature=related&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;YouTube - 
+															Mandelbrot Set Zoom 
+															Animation. Deepest 
+															zoom ever! 10^194 
+															(2.5E194).&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=FkJ2d2krDok&amp;feature=fvsr&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;YouTube - 
+															Mandelbrot Set 
+															Zoom.&quot; </font><u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=gEw8xpb1aRA&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;YouTube - 
+															Mandelbrot Set.&quot;
+															</font><u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=ES-yKOYaXq0&amp;feature=related&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span><u>
+															<font face="Arial" color="#000000" size="1">
+															YouTube - Broadcast 
+															Yourself.</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.youtube.com/watch?v=vuyRCfhCZT0&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															subdivision., 
+															perturbing the 
+															vertices of a 
+															recursive. &quot;The 
+															Geometry Junkyard: 
+															Fractals.&quot; </font>
+															<u>
+															<font face="Arial" color="#000000" size="1">
+															donald bren school 
+															of information and 
+															computer sciences @ 
+															the university of 
+															california, irvine</font></u><font face="Arial" color="#000000" size="1">. 
+															31 Oct. 2009 
+															&lt;http://www.ics.uci.edu/~eppstein/junkyard/fractal.html&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Lesmoir-Gordon, 
+															Nigel. </font><u>
+															<font face="Arial" color="#000000" size="1">
+															Introducing Fractal 
+															Geometry, 3rd 
+															Edition 
+															(Introducing)</font></u><font face="Arial" color="#000000" size="1">. 
+															Thriplow, Cambridge, 
+															UK: Totem Books, 
+															2006.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Maddocks, J. R. 
+															&quot;Fractal.&quot; </font>
+															<i>
+															<font face="Arial" color="#000000" size="1">
+															Gale Encyclopedia of 
+															Science</font></i><font face="Arial" color="#000000" size="1">. 
+															Ed. K. Lee Lerner 
+															and Brenda Wilmoth 
+															Lerner. 4th ed. 
+															Detroit: Gale Group, 
+															2008. </font><i>
+															<font face="Arial" color="#000000" size="1">
+															Student Resource 
+															Center - Junior</font></i><font face="Arial" color="#000000" size="1">. 
+															Gale. Great Valley 
+															Middle School. 21 
+															Nov. 2009 
+															&lt;http://find.galegroup.com/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Fractal.&quot; </font>
+															<i>
+															<font face="Arial" color="#000000" size="1">
+															UXL Encyclopedia of 
+															Science</font></i><font face="Arial" color="#000000" size="1">. 
+															Ed. Rob Nagel. 2nd 
+															ed. Detroit: U*X*L, 
+															2007. </font><i>
+															<font face="Arial" color="#000000" size="1">
+															Student Resource 
+															Center - Junior</font></i><font face="Arial" color="#000000" size="1">. 
+															Gale. Great Valley 
+															Middle School. 21 
+															Nov. 2009 
+															&lt;http://find.galegroup.com/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Taylor S. James. 
+															&quot;The geometry of 
+															fractal sets.&quot; &nbsp;</font><i><font face="Arial" color="#000000" size="1">Science.
+															</font></i>
+															<font face="Arial" color="#000000" size="1">
+															v229. (Sept 27, 
+															1985): p1381(1).
+															</font><i>
+															<font face="Arial" color="#000000" size="1">
+															Student Resource 
+															Center - Junior</font></i><font face="Arial" color="#000000" size="1">. 
+															Gale. Great Valley 
+															Middle School. 21 
+															Nov. 2009 
+															&lt;http://find.galegroup.com/ 
+															&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Perkins, Sid. &quot;It's 
+															a rough world: 
+															fractals help model 
+															vexing problems in 
+															earth science.&quot; &nbsp;</font><i><font face="Arial" color="#000000" size="1">Science 
+															News. </font></i>
+															<font face="Arial" color="#000000" size="1">
+															161. 5 (Feb 2, 
+															2002): 75(2). </font>
+															<i>
+															<font face="Arial" color="#000000" size="1">
+															Student Resource 
+															Center - Junior</font></i><font face="Arial" color="#000000" size="1">. 
+															Gale. Great Valley 
+															Middle School. 21 
+															Nov. 2009 
+															&lt;http://find.galegroup.com/ 
+															&gt;&nbsp;</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Baker-Robins, Cris 
+															J. &quot;Mandelbrot, 
+															Benoit B. (1924-).&quot;
+															</font><i>
+															<font face="Arial" color="#000000" size="1">
+															Encyclopedia of 
+															World Biography</font></i><font face="Arial" color="#000000" size="1">. 
+															Ed. Suzanne M. 
+															Bourgoin. 2nd ed. 
+															Detroit: Gale 
+															Research, 1998. 17 
+															vols.</font><i><font face="Arial" color="#000000" size="1">Student 
+															Resource Center - 
+															Junior</font></i><font face="Arial" color="#000000" size="1">. 
+															Gale. Great Valley 
+															Middle School. 23 
+															Nov. 2009 
+															&lt;http://find.galegroup.com&gt;.</font></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															Schroeder, Manfred.
+															</font><i>
+															<font face="Arial" color="#000000" size="1">
+															Fractals, Chaos, 
+															Power Laws: Minutes 
+															from an Infinite 
+															Paradise</font></i><span style="font-size: small"><font face="Arial" color="#000000" size="1">. 
+															New York: Dover 
+															Publications, 2009. 
+															Print.</font></span></p>
+															<p style="margin-left: 0.5in">
+															<font face="Arial" color="#000000" size="1">
+															q</font><span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; font-family: Times New Roman"><font face="Arial" color="#000000" size="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															</font></span>
+															<font face="Arial" color="#000000" size="1">
+															&quot;Benoit Mandelbrot 
+															(Polish 
+															mathematician) -- 
+															Britannica Online 
+															Encyclopedia.&quot;
+															</font><i>
+															<font face="Arial" color="#000000" size="1">
+															Encyclopedia - 
+															Britannica Online 
+															Encyclopedia</font></i><font face="Arial" color="#000000" size="1">. 
+															N.p., n.d. Web. 7 
+															Jan. 2010. &lt;<a href="http://www.britannica.com/EBchecked/topic/361663/Benoit-Mandelbrot">http://www.britannica.com/EBchecked/topic/361663/Benoit-Mandelbrot</a>&gt;.</font></p>
+															<div id="wrapper">
+																<div id="leftfade">
+																	<div id="rightfade">
+																		<div id="content">
+																			<div id="main-window">
+																				<div id="bib-maker-sidebar">
+																					<div id="bib-in-progress">
+																						<div id="bib-preview-contents">
+																							<div id="bib-preview-list">
+																								<blockquote>
+																									<div class="bib-item-info" id="bib-item-info-45376211">
+																										<font face="Arial" size="1">q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;PNNL: Breakthroughs Magazine - Summer 2006: Personality Profile.&quot; <i>Pacific Northwest National Laboratory</i>. N.p., n.d. Web. 17 Feb. 2010. &lt;http://www.pnl.gov/breakthroughs/issues/2006-issues/summer/personality_profile.stm&gt;. </font></div>
+																									<div class="bib-item-icons" id="bib-item-actions">
+																										<div id="bib-item-remove-45376043">
+																											<blockquote>
+																												<blockquote>
+																													<blockquote>
+																														<blockquote>
+																															<blockquote>
+																																<blockquote>
+																																	<blockquote>
+																																		<blockquote>
+																																			<blockquote>
+&nbsp;</blockquote>
+																																		</blockquote>
+																																	</blockquote>
+																																</blockquote>
+																															</blockquote>
+																														</blockquote>
+																													</blockquote>
+																												</blockquote>
+																											</blockquote>
+																										</div>
+																									</div>
+																									<div class="bib-item-info" id="bib-item-info-45376043">
+																										<font face="Arial" size="1">q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Vistapro Pictures.&quot; <i>Die Complang-Gruppe</i>. N.p., n.d. Web. 17 Feb. 2010. &lt;<a href="http://www.complang.tuwien.ac.at/alex/vistapro-pics.html">http://www.complang.tuwien.ac.at/alex/vistapro-pics.html</a>&gt;. </font>
+																										<p><font face="Arial" size="1">q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Box-Counting Dimension of the Koch Curve.&quot; <i>Box-Counting Dimension of the Koch Curve</i>. N.p., n.d. Web. 18 Feb. 2010. &lt;classes.yale.edu/fractals/FracAndDIm/BoxDim/KochBoxDim/KochBoxDim.html&gt;. </font></div>
+																								</blockquote>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p style="margin-left: 0.5in">&nbsp;</p>
+															<p style="margin-left: 0.5in">&nbsp;</p>
+														</blockquote>
+													</div>
+													</td>
+													<td class="sites-layout-tile sites-tile-name-content-2 sites-canvas-sidebar sites-layout-empty-tile">&nbsp;
+													</td>
+												</tr>
+											</table>
+											<div class="sites-layout-tile sites-tile-name-footer">
+												<div dir="ltr">
+													<div style="text-align: center">
+														<span style="font-size: large; color: rgb(0,0,0)">
+														Thank you for visiting 
+														this site, please link 
+														to it. :)</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p align="center">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</blockquote>
+			</td>
+			<td valign="top" height="1518" width="4">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<div id="sites-chrome-everything" style="DIRECTION: ltr">
+				<div id="sites-chrome-page-wrapper">
+					<div id="sites-chrome-page-wrapper-inside">
+						<div id="sites-chrome-main-wrapper">
+							<div id="sites-chrome-main-wrapper-inside">
+								<p align="center">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50">
+			<!-- MSCellType="ContentFoot" -->
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

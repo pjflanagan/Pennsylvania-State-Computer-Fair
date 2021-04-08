@@ -1,0 +1,256 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg')" style="background-color: #000000" background="Background2.jpg">
+
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="800" height="680" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75" background="TopBar.jpg">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black" size="7" color="#FFFFFF">
+Mandelbrot</font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p>
+			<img border="0" src="MandelbrotButton.jpg" width="100" height="20"></p>
+			<p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Math"></a><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			&nbsp;<p>
+			&nbsp;<p>&nbsp;</td>
+			<td valign="top" width="580" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+<blockquote>
+	&nbsp;<sup goog_docs_charIndex="69"><p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1480">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1481">
+	<font goog_docs_charIndex="1482">Mandelbrot helped open our 
+			eyes to these shapes and he has changed our entire outlook on 
+			mathematics by doing so. </font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1600">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1601">
+	<font goog_docs_charIndex="1602">&nbsp;</font></span><font face="Arial">
+	</font></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1608">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1609">
+	<font goog_docs_charIndex="1610">Benoit Mandelbrot was born 
+			on November 20, 1924 in Warsaw, Poland. His family believed strongly 
+			in education. His mother did not send him to school however so the. 
+			The beginning of his life he spent working and being taught by his 
+			family. His two uncles introduced him to the world mathematics and 
+			geometry. </font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1922">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1923">
+	<font goog_docs_charIndex="1924">&nbsp;</font></span><font face="Arial">
+	</font></p>
+	<p style="MARGIN: 0pt 0pt 6pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify" goog_docs_charIndex="1930">
+	<span style="FONT-FAMILY: 'Arial'; BACKGROUND-COLOR: #ffffff" goog_docs_charIndex="1931">
+	<font goog_docs_charIndex="1932">In 1936 he moved to Paris 
+			where he was taught at a secondary school. At the start of World War 
+			II, Mandelbrot and his family moved to Tulle, France to avoid the 
+			Nazi regime. There he attended another secondary school. In 1944, 
+			after the war was over, he went to Paris. </font></span></p>
+	<p style="MARGIN: 0pt 0pt 14pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify" goog_docs_charIndex="2205">
+	<span style="FONT-FAMILY: 'Arial'; BACKGROUND-COLOR: #ffffff" goog_docs_charIndex="2206">
+	<font goog_docs_charIndex="2207">Mandelbrot went to many 
+			colleges in the United States and France. He studied at Caltech, the 
+			University of Paris, Ecole Normale Supérieure, Ecole Polytechnique. 
+			He also learned at the Institute for Advanced Study in Princeton, 
+			the University of Geneva, and the University of Lille. He obtained 
+			many degrees and titles, such as a Ph.D, Professional Engineer in 
+			Aeronautics, and Master of Science. He joined the French Air Force, 
+			and visited the Massachusetts Institution of Technology where he was 
+			a research associate, then lecturer in electrical engineering, and 
+			then Institute Lecturer.</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="2799">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="2800">
+	<font goog_docs_charIndex="2801">In 1958 Mandelbrot and his 
+			wife, Alitette, moved to the United States. Mandelbrot joined the 
+			research staff at the IBM Thomas J. Watson Research Center in 
+			Yorktown Heights, New York. </font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="2988">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="2989">
+	<font goog_docs_charIndex="2990">&nbsp;</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="2995">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="2996">
+	<font goog_docs_charIndex="2997">While working for IBM an 
+			error occurred in the system. Files were deleted, data was lost, and 
+			people could not communicate. IBM was using phone lines to send 
+			emails, and this was causing problems. Mandelbrot observed these 
+			errors on a graph and found the errors were coming in a pattern. If 
+			you viewed the errors over an hour, it would look the same as you 
+			viewed it in a minute, and for a second, and millisecond, and so on.</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="3426">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3427">
+	<font goog_docs_charIndex="3428">
+	<img border="0" src="mandelbrot_fractals.jpg" width="173" height="239" align="left">&nbsp;</font></span></p>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="3433">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3434">
+	<font goog_docs_charIndex="3435">This reminded Mandelbrot 
+			about something that interested him as a child. His uncle had talked 
+			to him about papers written by a man named Gaston Julia. Mandelbrot 
+			studied these papers and started to think up the basics of fractal 
+			geometry.</font></span></p>
+</blockquote>
+<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="3677">
+<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3678">
+<font goog_docs_charIndex="3679">&nbsp;</font></span></p></sup>
+<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+	<sup goog_docs_charIndex="69">
+	<blockquote>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="3684">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3685">
+		<font goog_docs_charIndex="3686">Mandelbrot started to 
+			graph all the Julia Sets using a computer. He found the images to 
+			create strange patterns. In 1975 Mandelbrot coined the word 
+			“fractal.” Then in 1980 Mandelbrot came up with a formula, z</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3897"><sub goog_docs_charIndex="3898"><font goog_docs_charIndex="3899">1</font></sub></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3904"><font goog_docs_charIndex="3905">=z^</font></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3910"><sup goog_docs_charIndex="3911"><font goog_docs_charIndex="3912">2</font></sup></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="3917"><font goog_docs_charIndex="3918">+c. 
+			This formula combined all of the Julia Sets. Mandelbrot put this 
+			formula into a computer, and iterated it over and over until he 
+			created an image. The fractal he made is now known as the Mandelbrot 
+			Set, the M Set for short.</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="4149">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="4150">
+		<font goog_docs_charIndex="4151">&nbsp;</font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="4156">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="4157">
+		<font goog_docs_charIndex="4158">Mandelbrot introduced his 
+			new geometry to mathematicians, who did not embrace the idea. To 
+			them fractals were just pictures. In response of being ridiculed for 
+			his idea he started to write a book, </font></span>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="4358">
+		<i goog_docs_charIndex="4359"><font goog_docs_charIndex="4360">
+		<a target="_blank" href="http://books.google.com/books?id=xJ4qiEBNP4gC&printsec=frontcover&dq=fractal+geometry+of+nature&cd=1#v=onepage&q=&f=false">The Fractal Geometry of Nature</a></font></i></span><span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="4394"><font goog_docs_charIndex="4395">. 
+			In this he explained what fractal geometry was and how it worked.</font></span></sup></blockquote>
+</div>
+<blockquote>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+</blockquote>
+<p>&nbsp;</p>
+			</blockquote>
+			</td>
+			<td valign="top" height="551" width="110">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;<p align="center"><font face="Arial" size="2">Mandelbrot created the Mandelbrot Set</font></p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p align="center">
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p align="center">
+			<font face="Arial" size="2">Click to listen to &quot;<a target="_blank" href="http://www.google.com/url?q=http://popup.lala.com/popup/2810527659678064677&ei=cwNqS5GJH8mXtgf9qOyIAQ&sa=X&oi=music_play_track&resnum=1&ct=result&cd=2&ved=0CAgQ0wQoADAA&usg=AFQjCNGyazuOvGl9VENWHhz_puyFVq0wpg">Mandelbrot 
+			Set by Jonathan Coulton</a>&quot;</font></p>
+			<p align="center">
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<div id="sites-chrome-everything" style="DIRECTION: ltr">
+				<div id="sites-chrome-page-wrapper">
+					<div id="sites-chrome-page-wrapper-inside">
+						<div id="sites-chrome-main-wrapper">
+							<div id="sites-chrome-main-wrapper-inside">
+&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p>
+			&nbsp;</p>
+			<p align="center"><font face="Arial" size="2">The Mandelbrot Set formula is:</font></p>
+			<p align="center"><font face="Arial" size="2"><i>Z</i>1=<i>Z^</i>2+<i>C</i></font></p>
+			<p align="center"><font face="Arial" size="2"><i>Z</i>2=<i>Z^</i>2+<i>C</i></font></p>
+			<p align="center"><font face="Arial" size="2"><i>Z</i>3+<i>Z^</i>2+<i>C</i></font><p align="center">
+			<font face="Arial" size="2">..........etc.</font></td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50" background="TopBar.jpg">
+			<!-- MSCellType="ContentFoot" -->
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

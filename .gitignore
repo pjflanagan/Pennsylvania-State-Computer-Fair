@@ -1,0 +1,7 @@
+**/*.psd
+**/*.ai
+.DS_Store
+**/*.webloc
+./src/**/*.zip
+**/*.doc
+**/*.docx

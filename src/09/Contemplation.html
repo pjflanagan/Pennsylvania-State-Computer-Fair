@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Franz Kafka -  Contemplation And Other Short Stories</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #4E5869;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-image: url(BookCover.jpg);
+	background-repeat:no-repeat;
+	background-color: #030303;
+	background-attachment:fixed;
+	background-position:center;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #030303;
+	font-weight: normal;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 80%;
+	max-width: 1000px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	color: #030303;
+	background-image: url(Paper.jpg);
+	height: 18.25in;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #clear;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 20%;
+	background: #93A5C4;
+	padding-bottom: 0px;
+	background-image: url(Paper.jpg);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #030303;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
+}
+.content {
+	padding: 10px 0;
+	width: 80%;
+	float: left;
+	text-align: left;
+	font-weight: bold;
+	color: #EDEDED;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.sidebar2 {
+	float: left;
+	width: 20%;
+	padding: 10px 0;
+	background-color: #FFF;
+	color: #030303;
+	text-align: center;
+	background-image: url(Paper.jpg);
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~The footer ~~ */
+.footer {
+	padding: 10px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	background-image: url(RippedPaperFooter%20copy.png);
+	width: 100%;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+/* ~~miscellaneous float/clear classes~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.container .content table tr td {
+	text-align: left;
+	color: #030303;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	font-size: 100%;
+}
+.container .content table tr th {
+	color: #030303;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-align: left;
+}
+.container .sidebar1 p {
+	color: #030303;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+.SideBarText {
+	font-weight: normal;
+}
+.TitleOfANovel {	font-style: italic;
+}
+-->
+</style><!--[if lte IE 7]>
+<style>
+.content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */
+</style>
+<![endif]-->
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onload="MM_preloadImages('RibonBookmarkOver.png')">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="container">
+  <div class="header"></div>
+  <div class="sidebar1">
+    <p><a href="Index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Home','','RibonBookmarkOver.png',1)"><img src="RibonBookmarkUp.png" alt="Home" name="Home" width="153" height="267" border="0" id="Home" /></a></p>
+<p>&nbsp;</p>
+    <p class="SideBarText">&nbsp;</p>
+</div>
+  <div class="content">
+    <table width="800" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th height="261" colspan="3" scope="col"><p><span class="TitleOfANovel">Contemplation</span> was a collection of eighteen of Kafka's short stories. Franz dedicated this book to his father, which was very embarrassing  to him. He also gave this book as a gift to a woman named Gertude Thieberger. On the inside cover Kafka wrote dedication  that included a quote from Prosper Merimée quote. It read: &quot;'No flies will get into a closed mouth&rsquo; It has not been followed in the book. Therefore it is full of flies. The best would be to keep it closed.&quot;</p>
+        <p><span class="TitleOfANovel">Contemplation</span> included short stories like <span style="text-align: center">&quot;The Sudden Walk,&quot; &quot;Resolutions,&quot;</span> <span style="text-align: left">&quot;Bachelor's Ill Luck,&quot; &quot;Unmasking a Confidence Trickster.&quot;</span> Most of these stories were about Kafka's life, tuberculosis, and self-image. Outside of <i>Contemplation</i>, Kafka had other short stories. Country Doctor, tissue paper, the burrow. </p></th>
+      </tr>
+      <tr>
+        <th colspan="2" scope="col"><p>In Kafka's short story, &quot;The Trees,&quot; Kafka compares trees to humans. Kafka states that the bases of trees in the snow look easy to push over. However when you try it is not easy to topple. Some people are the same. The easy, vulnerable looking ones are planted firmly in the ground. <br />
+            <br />
+Kafka probably thought that he might be able to change his father's views of him. However his father was very firmly rooted where he was<br />
+        </p></th>
+        <th width="302" scope="col"><img src="TreeFramed.jpg" width="302" height="315" alt="Trees" /></th>
+      </tr>
+      <tr>
+        <th width="338" height="395" scope="row"><img src="BandAid.jpg" width="336" height="336" alt="Doctor" /></th>
+        <td colspan="2"><p>In Kafka's time it was a common to think that if a doctor could not save someone's life then they should crawl into the grave with the unfortunate patient. In Kafka's short story, &quot;The Country Doctor,&quot; a doctor could not save a man's life. To please the family he hops into the grave with him. The family remains ungrateful.<br />
+            <br />
+Kafka spent time with his uncle in the country. During that time he wrote this short story. This story beautifully displays how ignorant some beliefs can be. It also describes how ungrateful people can be, even when they get what they want. &quot;The Country Doctor&quot; was not included in <i>Contemplation</i>.</p></td>
+      </tr>
+      <tr>
+        <th height="224" colspan="3" scope="row"><p>An untitled story by Franz Kafka shows how he felt around women and how he thought that they viewed him. In this story a Kafka is talking to a woman. Suddenly she declares that he is made of tissue paper, and she can see right through him. The gentle tissue paper man will sway for any breeze to be let in through the door.<br />
+            <br />
+Although untitled and very short it is very symbolic. Kafka feels that a woman would see right through him, and that he would be attracted to the next one he saw. This story was not published in Kafka's life and was not in <i>Contemplation</i>.<br />
+        </p></th>
+      </tr>
+      <tr>
+        <th height="300" colspan="2" scope="row"><p>Franz wrote &quot;The Burrow&quot; about his tuberculosis. A small animal is getting settled in his new burrow. The small animal hears a soft sound. The sound grows louder and more annoying. As the animal proceeds to look for it the reader realizes that it is coming from the animal itself.<br />
+            <br />
+Kafka always seemed to get tuberculosis when his luck started to run out. Especially after breaking up with women. This story was not published in Kafka's life.</p></th>
+        <th scope="row"><img src="TheBurrow.png" width="300" height="300" alt="The Burrow" /></th>
+      </tr>
+      <tr>
+        <th height="197" colspan="3" scope="row"><p>&quot;In The Penal Colony&quot; is a short story about a man who caries out the death sentence on people. He operates a machine that carves words into victims’ backs. In curiosity he places himself into the device. The machine gets to work on the man carving in the reason why he deserves punnishment.</p>
+          <p>Kafka means to show is that we deserve the fate that we put onto others. This was especially relevant to the Nazis who killed innocent people for no sensible reason. &quot;In The Penal Colony&quot; was written during the war.<br />
+        </p></th>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><!-- end .footer --></p>
+</div>
+<!-- end .container --></div>
+</body>
+</html>

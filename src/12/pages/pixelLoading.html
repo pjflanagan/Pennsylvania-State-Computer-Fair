@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Pixel Click</title>
+<style>
+
+body {overflow:hidden; background:url(img/earthBackground.png); background-size:cover;}
+
+* { margin: 0; padding: 0;}
+
+#pix {
+	display: block;
+	background: #FFF;
+}
+</style>
+
+</head>
+<body>
+<canvas id="pix" ></canvas>
+<script>
+window.onload = function(){
+	
+	var canvas = document.getElementById("pix");
+	var ctx = canvas.getContext("2d");
+	
+	var W = window.innerWidth, H = window.innerHeight;
+	canvas.width = W;
+	canvas.height = H;
+	
+	var gap = 0;
+	var wid = 30,
+		x = gap,
+		y = gap;
+	var o = 1;
+	
+	document.getElementById("pix").style.opacity = o;
+	
+	function rando(min,max){
+		return Math.floor(Math.random()*max)+min;	
+	}
+	
+	function randomColor() {
+		var rm = 255;
+		//	gm = 255,
+		//	bm = 255;
+		var r = Math.round(Math.random()*rm);
+		//var g = Math.round(Math.random()*gm);
+		//var b = Math.round(Math.random()*bm);
+		var a = (Math.random()*.5)+.7;
+		var rgba = "rgba("+r+", "+r+", "+r+", "+a+")";
+		return rgba;
+	}
+	
+	function drawPixel(dx,dy,color){
+		ctx.beginPath();
+    	ctx.rect(dx, dy, wid, wid);
+      	ctx.fillStyle = color;
+      	ctx.fill();
+		return false;
+	}
+	
+	function drawPix(){
+		ctx.beginPath();
+    	ctx.rect(x, y, wid, wid);
+      	ctx.fillStyle = randomColor();
+      	ctx.fill();
+		return false;
+	}
+	
+	function setup(){
+		while(y<H){
+		drawPix();
+		x += wid + gap;
+			if(x>W){
+				x = gap;
+				y += wid + gap;
+			}
+		}
+		return false;
+	}
+	
+	function getPixel(mousePos){
+		var px = 0, py = 0;
+		
+		for(var i = 0; i < mousePos.x; i += wid + gap){ px = i + gap; }
+		for(var i = 0; i < mousePos.y; i += wid + gap){ py = i + gap; }
+		
+		return { x: px, y: py };
+	}
+	
+	function getPixelWithCoords(gx,gy){
+		var px = 0, py = 0;
+		for(var i = 0; i < gx; i += wid + gap){ px = i + gap; }
+		for(var i = 0; i < gy; i += wid + gap){ py = i + gap; }
+		
+		return { x: px, y: py };
+	}
+	
+	function animate(){
+		var ax = rando(0,W);
+		var ay = rando(0,H);
+		var pi = getPixelWithCoords(ax,ay);
+		drawPixel(pi.x,pi.y,randomColor());
+		document.getElementById("pix").style.opacity = o;
+		o -= .001;
+		if(o==0){
+			clearInterval(id);
+			document.getElementById("pix").style.display = "none";
+		}
+	}
+	
+	//MAIN
+	setup();
+	var id = setInterval(animate,1);
+}
+</script>
+</body>
+</html>

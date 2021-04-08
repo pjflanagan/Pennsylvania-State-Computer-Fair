@@ -1,0 +1,525 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+h2 { font-size: 14pt }
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button5.jpg', /*url*/'button6.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg', /*url*/'buttonE.jpg', /*url*/'buttonD.jpg')" style="background-color: #000000">
+
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="800" height="864" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black"><b>
+<span style="font-family: American Typewriter"><font color="#FF0000" size="7">D=ictionary</font></span></b></font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<a href="Monsters.htm">
+			<img border="0" id="img3" src="button4.jpg" height="20" width="100" alt="Monsters" fp-style="fp-btn: Border Left 6" fp-title="Monsters" onmouseover="FP_swapImg(1,0,/*id*/'img3',/*url*/'button5.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img3',/*url*/'button4.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img3',/*url*/'button6.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img3',/*url*/'button5.jpg')"></a></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Math"></a><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			<a href="Dictionary.htm">
+			<img border="0" id="img7" src="buttonC.jpg" height="20" width="100" alt="Dictionary" onmouseover="FP_swapImg(1,0,/*id*/'img7',/*url*/'buttonD.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img7',/*url*/'buttonC.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img7',/*url*/'buttonE.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img7',/*url*/'buttonD.jpg')" fp-style="fp-btn: Border Left 6; fp-orig: 0" fp-title="Dictionary"></a><p>
+			&nbsp;<p>&nbsp;</td>
+			<td valign="top" width="591" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+<p align="center">&nbsp;</p>
+<div id="sites-chrome-everything0" style="DIRECTION: ltr">
+	<div id="sites-chrome-page-wrapper0">
+		<div id="sites-chrome-page-wrapper-inside0">
+			<div id="sites-chrome-main-wrapper0">
+				<div id="sites-chrome-main-wrapper-inside0">
+					<table class="sites-layout-hbox" id="sites-chrome-main" cellSpacing="0">
+						<tr>
+							<td id="sites-canvas-wrapper">
+							<div id="sites-canvas">
+								<div class="sites-canvas-main" id="sites-canvas-main">
+									<div id="sites-canvas-main-content">
+										<div class="sites-layout-name-three-column-hf sites-layout-vbox" xmlns="http://www.w3.org/1999/xhtml">
+											<table class="sites-layout-hbox" cellSpacing="0">
+												<tr>
+													<td class="sites-layout-tile sites-tile-name-content-1">
+													<div dir="ltr">
+														<span style="FONT-SIZE: 16px; COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+														<div style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+															<h1 style="MARGIN: 0pt; TEXT-ALIGN: left">
+															<u><font size="2">A</font></u></h1>
+														</span>
+														<span style="COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+															<div>
+																<u>
+																<font size="2"><br>
+&nbsp;</font></u></div>
+														</div>
+														</span>
+														<span style="FONT-SIZE: 16px; COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+														<div style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+															<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">B</font></u></b></span></h2>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">C</font></u></b></span></h2>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Chaos- random 
+															or&nbsp;indescribable</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Complex numbers- a 
+															number&nbsp;</font><i><font size="2">a+bi</font></i><font size="2">&nbsp;where&nbsp;</font><i><font size="2">I</font></i><font size="2">&nbsp;is 
+															imaginary and&nbsp;</font><i><font size="2">a&nbsp;</font></i><font size="2">and&nbsp;</font><i><font size="2">b</font></i><font size="2">&nbsp;are 
+															real.</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Complex plane- a 
+															plane where the “x” 
+															axis is real 
+															numbers, and the “y” 
+															axis is imaginary 
+															numbers.</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Connected- a type of 
+															fractal shape; 
+															example: 
+															full&nbsp;view&nbsp;Mandelbrot 
+															Set</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2"><br>
+&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Curve- a line that 
+															bends in a regular 
+															pattern, like part 
+															of a circle.</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">D</font></u></b></span></h2>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Dendrite-&nbsp;type&nbsp;of 
+															fractal shape:&nbsp;</font></span></p>
+															<font size="2">
+															<div style="DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto; TEXT-ALIGN: center">
+																<a rel="nofollow" imageanchor="1" href="http://upload.wikimedia.org/wikipedia/commons/0/07/Dendrite_julia.png">
+																<img height="153" src="http://upload.wikimedia.org/wikipedia/commons/0/07/Dendrite_julia.png" width="200" border="0"></a></div>
+															</font>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Dimension- a special 
+															property, for 
+															example a line has 
+															one dimension, a 
+															plane has two, and a 
+															cube has three</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Dust-&nbsp;type&nbsp;of 
+															fractal shape; 
+															example: Cantor Set</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2"><br>
+&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">E</font></u></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">F</font></u></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Formula- a 
+															mathematical phrase 
+															with numbers and 
+															variables</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Fractal- an 
+															irregular geometric 
+															shape that can be 
+															divided into parts 
+															that are similar to 
+															the whole</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Fractal dimension- 
+															device describing 
+															natural objects</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Fractal geometry- 
+															branch of geometry 
+															describing nature</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<h3 style="FONT-SIZE: 12pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">G</font></u></b></span></h3>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">H</font></u></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">I</font></u></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Imaginary numbers- 
+															the square root of a 
+															negative number 
+															represented with&nbsp;</font><i><font size="2">“i”</font></i></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Infinity- forever</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Integer- any real 
+															number and its 
+															opposite</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">
+															Iteration- 
+															repetition of the 
+															same step at a 
+															different scale</font></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">J</font></u></b></span></p>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<font size="2">&nbsp;</font></span></p>
+															<h3 style="FONT-SIZE: 12pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">K</font></u></b></span></h3>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<h3 style="FONT-SIZE: 12pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">L</font></u></b></span></h3>
+															<p style="MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><font size="2">&nbsp;</font></b></span></p>
+															<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">
+															<span style="FONT-FAMILY: Times New Roman">
+															<b><u>
+															<font size="2">M</font></u></b></span></h2>
+															<p style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">&nbsp;</p>
+															<div id="sites-chrome-everything1" style="DIRECTION: ltr">
+																<div id="sites-chrome-page-wrapper1">
+																	<div id="sites-chrome-page-wrapper-inside1">
+																		<div id="sites-chrome-main-wrapper1">
+																			<div id="sites-chrome-main-wrapper-inside1">
+																				<table class="sites-layout-hbox" id="sites-chrome-main0" cellSpacing="0">
+																					<tr>
+																						<td id="sites-canvas-wrapper0">
+																						<div id="sites-canvas0">
+																							<div class="sites-canvas-main" id="sites-canvas-main0">
+																								<div id="sites-canvas-main-content0">
+																									<div class="sites-layout-name-three-column-hf sites-layout-vbox" xmlns="http://www.w3.org/1999/xhtml">
+																										<table class="sites-layout-hbox" cellSpacing="0">
+																											<tr>
+																												<td class="sites-layout-tile sites-tile-name-content-1">
+																												<div dir="ltr">
+																													<span style="FONT-SIZE: 16px; COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+																													<div style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+																														<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Monster- one of the original and basic fractals</font></span></div>
+																													</span></div>
+																												</td>
+																											</tr>
+																										</table>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">&nbsp;</p>
+															<div id="sites-chrome-everything2" style="DIRECTION: ltr">
+																<div id="sites-chrome-page-wrapper2">
+																	<div id="sites-chrome-page-wrapper-inside2">
+																		<div id="sites-chrome-main-wrapper2">
+																			<div id="sites-chrome-main-wrapper-inside2">
+																				<table class="sites-layout-hbox" id="sites-chrome-main1" cellSpacing="0">
+																					<tr>
+																						<td id="sites-canvas-wrapper1">
+																						<div id="sites-canvas1">
+																							<div class="sites-canvas-main" id="sites-canvas-main1">
+																								<div id="sites-canvas-main-content1">
+																									<div class="sites-layout-name-three-column-hf sites-layout-vbox" xmlns="http://www.w3.org/1999/xhtml">
+																										<table class="sites-layout-hbox" cellSpacing="0">
+																											<tr>
+																												<td class="sites-layout-tile sites-tile-name-content-3">
+																												<div dir="ltr">
+																													<span style="FONT-SIZE: 16px; COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+																													<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">N</font></u></b></span></h2>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><font size="2">&nbsp;</font></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Nature- the world not created by humans</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><font size="2">&nbsp;</font></b></span></p>
+																													<h3 style="FONT-SIZE: 12pt; MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">O</font></u></b></span></h3>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><font size="2">&nbsp;</font></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Oscillate- when a sequence reapeats numbers back and forth, for instance 0, 1, 0, 1, 0, 1…</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><font size="2">&nbsp;</font></b></span></p>
+																													<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">P</font></u></b></span></h2>
+																													</span>
+																													<span style="COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><font size="2" face="'times new roman', serif">Pathological-&nbsp;properties that are strange and do not behave regularly; describing nature</font><font size="2"></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><font face="'times new roman', serif">&nbsp;</font></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><font face="'times new roman', serif">Plane- a flat surface with only two dimensions, length and width</font></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman">&nbsp;</span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"></font><span style="FONT-FAMILY: Times New Roman"><font size="2">Point- a location on a plane represented with a dot</font></span></p>
+																													</span>
+																													<span style="FONT-SIZE: 16px; COLOR: rgb(0,0,0); FONT-FAMILY: Times New Roman">
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">Q</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">R</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<h2 style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">S</font></u></b></span></h2>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Scale- a level of how far zoomed in on an object</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Self-similarity- being similar to oneself</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">Set- a group of numbers or points</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><font size="2">&nbsp;</font></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">T</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">V</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">W</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">X</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">Y</font></u></b></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><font size="2">&nbsp;</font></span></p>
+																													<p style="MARGIN: 0pt; TEXT-ALIGN: justify"><span style="FONT-FAMILY: Times New Roman"><b><u><font size="2">Z</font></u></b></span></span></div>
+																												</td>
+																											</tr>
+																										</table>
+																									</div>
+																								</div>
+																							</div>
+																						</div>
+																						</td>
+																					</tr>
+																				</table>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<p style="FONT-SIZE: 14pt; MARGIN: 0pt; TEXT-ALIGN: justify">&nbsp;</div>
+														</span></div>
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p align="left">&nbsp;</p>
+			</blockquote>
+			</td>
+			<td valign="top" height="735" width="99">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<div id="sites-chrome-everything" style="DIRECTION: ltr">
+				<div id="sites-chrome-page-wrapper">
+					<div id="sites-chrome-page-wrapper-inside">
+						<div id="sites-chrome-main-wrapper">
+							<div id="sites-chrome-main-wrapper-inside">
+								<p align="center">&nbsp;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p>&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50">
+			<!-- MSCellType="ContentFoot" -->
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

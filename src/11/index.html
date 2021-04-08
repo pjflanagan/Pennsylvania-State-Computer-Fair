@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Radio Wave Physics</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<script src="apple.js"></script>
+<script src="jquery-1.8.2.js"></script>
+</head><body onresize="window.location.reload()">
+<!--SETUP-->
+<div id="loading"></div>
+<div id="blocker"><button id="close" onclick="closeSeeMore()">&#215;</button><div id="see-more-info"></div></div>
+<div id="grid"></div>
+<div id="grad"></div>
+<header>Physics of Radio Waves</header>
+<div id="link-box"><c id="a">Introduction</c> | <c id="b">Formulas</c> | <c id="c">Spectrum</c> | <c id="d">Data</c> | <c id="e">Experiment</c> | <c id="f">Isaac</c></div>
+<img id="apple" src="apple-fall.png" />
+<div class="parallax" id="para1"></div>
+<div class="parallax" id="para2"></div>
+<div class="parallax" id="para3"></div>
+<div class="parallax" id="para4"></div>
+<!--FIRST SLIDE-->
+<div class="slide" id="slide1">
+<div class="title" id="title1">Introduction</div>
+<div class="info" id="info1">
+  <p>Welcome to Radio Wave Physics. Just click on the little red "See More..." box to read more about radio waves. Then click on the "Next Slide:" button to scroll down to the next page.<button class="see-more" onclick="seeMore(1)">See More...</button> </p></div>
+<div class="button" id="button1">Next Slide: Variables and Formulas</div>
+</div>
+<!--SECOND SLIDE-->
+<div class="slide" id="slide2">
+<div class="title" id="title2">Formulas</div>
+<div class="info" id="infoEqua">
+	<p><img src="equationU.png" width="275" height="108" /><button class="see-more" onclick="seeMore(2)">See More...</button></p></div>
+<div class="button" id="button2">Next Slide: Spectrum of Waves</div>
+</div>
+<!--THIRD SLIDE-->
+<div class="slide" id="slide3">
+<div class="title" id="title3">Spectrum</div>
+<div class="info" id="infoSpec"><p><img src="specturm.png" width="500" height="75" /></p></div>
+<div class="info" id="info3">
+	<p>The most commonly known radio waves are AM and FM waves, however there are other waves reserved for television stations, walkie-talkies, and radar. These information-transferring waves have longer wavelengths than visible light. While the particle that the wave sends moves up and down in a transverse fashion, information can be sent on theses waves in either transverse or longitudinal form. In the chart to the left, visible light has the shortest frequency, which is between 7.9&#215;10<sup>14</sup> and 4&#215;10<sup>14</sup> Hertz. Data transferring frequencies have longer wavelengths and are less frequent than visible light. Microwaves are located in the infrared zone, which is between 10<sup>11</sup> and 10<sup>9</sup> Hertz. Cell phone signals are located on the longer side of infrared waves and in the shorter side of radar waves. FM frequencies lie around 10<sup>8</sup> Hz. TV frequencies are found around 5&#215;10<sup>7</sup>. AM waves lie around 10<sup>6</sup> Hz. Broadcasting at sound frequencies are found in spots much lower than these.</p></div>
+<div class="button" id="button3">Next Slide: Data Transfer</div>
+</div>
+<!--FOURTH SLIDE-->
+<div class="slide" id="slide4">
+<div class="title" id="title4">Data</div>
+<div class="info" id="infoMod"><p><img src="soundModulations.png" width="500" height="225" /></p>
+  <p><button class="see-more" onclick="seeMore(4)">See More...</button> </p></div>
+<div class="button" id="button4">Next Slide: Experiment</div>
+</div>
+<!--FIFTH SLIDE-->
+<div class="slide" id="slide5">
+<div class="title" id="title5">Experiment</div>
+<div class="info" id="info5"><p>In order to test the properties of FM antennas, I conducted an experiment involving angles. For this experiment I recorded the direction, north, south, east, or west, at which the antenna was pointed that sounded best for each FM radio station, and worst for each station. The purpose was to figure out how a wave hits an antenna to make it work at its best. An antenna works when a wave pushes the positive and negative fields up and down on contact. This suggests that by positioning an antenna perpendicular to an incoming wave would work best. During experimentation I realized it is best to have the antenna positioned perpendicular to the wave's direction, but there is no conclusive evidence to say that this is the best way for waves to be picked up because there are a few counter examples.</p>
+  <p><button class="see-more" onclick="seeMore(5)">See More...</button> </p></div>
+<div class="button" id="button5">Next Slide: Isaac</div>
+</div>
+<!--ISAAC-->
+<div class="button" id="button-sources" onclick="seeMore(10)">Sources</div>
+<a href="#slide1"><div class="button" id="button-last"> &uarr; Back To Top &uarr;</div></a>
+<img id="isaac" src="isaac.png" width="630" height="300" /> 
+<script>
+//See More Box
+function seeMore(boxNum){
+	$("#close").css({"display":"block"});
+	$("#blocker").css({"display":"block"});
+	//$("#see-more-info").load("subInfo.html");
+	if(boxNum == 1) document.getElementById("see-more-info").innerHTML = "<h1>Introduction</h1><p>Physics is all around us. Everything can be described by mathematical equations. The well-known story of Isaac Newton and his apple sparks the source of the math of life, and from this math, technologies and understandings we take for granted today, were discovered. A favorite pastime of mine is listening to the radio, and the way the radio waves work, is astounding. The ability to transport information through an invisible medium. Radio waves are entirely physics and math, and we seek to break down the way that these waves work.</p>";
+	else if(boxNum == 2) document.getElementById("see-more-info").innerHTML = "<h1>Equations of Waves</h1><p>Before analyzing radio waves specifically, the general properties of all waves must be understood. A wave is the rhythmic path that a particle takes in its motion. The particle starts at rest, referred to as the undisturbed position. From this position, that particle takes on a sinusoidal path. It will reach the amplitude, the farthest point away from undisturbed, and then turn back. It will cross its original position in the opposite direction, reach the opposite amplitude and then return to its original y-axis position and direction. Once it is at this point, it has completed one cycle. Cycles are measured in two ways. The length of the cycle, wavelength, is denoted by the Greek symbol lambda ( &lambda; ). The time it takes for a particle to complete a cycle is called the period ( T ). The period of the wave links directly to the frequency ( <i>f</i> ) of the wave, which is how many cycles are completed in one second. Frequency is denoted with the unit Hertz (Hz).</p><p>The equation ( <i>c</i> = <i>f</i>&#215;&lambda; = &lambda;/T ) links all the variables together. In English the equation reads: the wave velocity equals the frequency times the wavelength, which equals the wavelength divided by the period. For radio waves, which move close to the speed of light, the constant ( <i>c</i> ) is substituted in. The speed of light in a vacuum is approximately 299,792,458 meters per second, which is what c is equal to. When using this equation, because the speed of light is the same for all radio waves, all other properties of a wave can be derived with just one other variable being known.</p>";
+	else if(boxNum == 3) document.getElementById("see-more-info").innerHTML = "<h1>How Data Is Transferred</h1><p>AM stands for amplitude modulation. This means that in order to transfer data on an AM frequency, the height of each wave is changed to represent the data being transferred. This method uses the wave's transverse properties to represent changes in data. To transfer binary code this way, an AM receiver would measure the height of the sinusoid. The varying heights of the wave each represent ones and zeroes, where the taller amplitude is a one, and the shorter amplitude is a zero. To transfer voice or music, a converter measures the frequency and amplitude of a sound wave, and converts it to the frequency and amplitude to a radio wave. The larger sound wave moves up and down, at its frequency, and the radio wave fills the sound wave by replicating the original amplitude at its own much smaller frequency. AM stations broadcast on a large wavelength, which allows it to travel long distances. However, the less frequent data points make its signal weaker, and limits it carrying power to talk shows and news stations.</p><p>FM stands for frequency modulation. This means that in order to represent data, the wave's frequency is changed. This method uses the wave's longitudinal changes to represent data. To transfer binary data for example, a zero would be represented by a large gap in between two amplitudes, and a one would be represented by a small gap in between two amplitudes. To transfer audio the wave's frequency decreases as the amplitude of the sound wave decreases and the wave's frequency increases as the sound wave's amplitude increases. The slinky laid out on the floor discussed earlier would represent frequency modulation on a more basic scale. </p><button class='see-more' onclick='seeMore(4)'>Go Back...</button>";
+	else if(boxNum == 4) document.getElementById("see-more-info").innerHTML = "<h1>How Data Is Transferred</h1><p>There are two types of waves, transverse and longitudinal waves. Transverse waves' disturbances occur perpendicular to the direction. This is best displayed by rippling water, which moves up and down away from the point the wave started. Longitudinal waves have disturbances that occur parallel, or in the same direction as the wave. This is best displayed by a slinky laid flat on the ground. If a person pushes one end towards the other and pulls back, a ripple of scrunched slinky will move through the stretched slinky.</p><p>Radio waves can transfer data and sound. The digital message that a phone sends over a text message has been translated from the original binary series of ones and zeros into a wave. The music or voice that a radio station or phone transfers has been translated from its original sound frequency into a new light frequency. Sound waves move at a velocity of 340 meters per second and have a frequency between 100 to 12,000 Hz. Light travels faster and is more frequent than sound. Because of this, when converted, the frequency must be replicated differently, and the altered for the difference in velocity. The modification of the wave accounts for the frequency difference and the velocity difference by modifying it in such a way, that when received, it can easily be converted back into sound. Each of these types of waves is transferred differently, depending on which way the wave changes form to represent change, transverse or longitudinal.</p><button class='see-more' onclick='seeMore(3)'>Continue...</button>"
+	
+	else if(boxNum == 5) document.getElementById("see-more-info").innerHTML = "<h1>Experiment Materials</h1><img src='slide2.jpg' alt='Materials' height='540' width='720' /><button class='see-more' onclick='seeMore(6)'>Continue...</button>"
+	
+	else if(boxNum == 6) document.getElementById("see-more-info").innerHTML = "<h1>Conducting Experiment</h1><img src='slide0.jpg' alt='Materials' height='540' width='720' /><button class='see-more' onclick='seeMore(7)'>Continue...</button>";
+	
+	else if(boxNum == 7) document.getElementById("see-more-info").innerHTML = "<h1>Experiment Results</h1><img src='slide3.jpg' alt='Results Graph' height='540' width='720' /><button class='see-more' onclick='seeMore(8)'>Continue...</button>";
+	
+	else if(boxNum == 8) document.getElementById("see-more-info").innerHTML = "<h1>Experiment Results</h1><iframe src='table.htm' width='100%' height='69%' frameborder='0'></iframe><button class='see-more' onclick='seeMore(5)'>Go Back...</button>";
+	
+	else if(boxNum == 10) document.getElementById("see-more-info").innerHTML = "<h1>Bibliography</h1><p><ul><li>Truxal, John G. The Age of Electronic Messages. Cambridge, Mass.: MIT Press, 1990. Print.</li><li>Cutnell, John D., and Kenneth W. Johnson. Physics. 7th ed. Hoboken, NJ: Wiley, 2007.</li><li>Segré, Ermilio. From Falling Bodies to Radio Waves: Classical Physicists and Their Discoveries. New York: W. H. Freeman, 1984.</li><li>Pain H. J. The Physics of Vibrations and Waves. Chichester Sussex: Wiley, 1983.</li><li>Schnickel, Andrew. 'Illumin - Catch a Wave: Radio Waves and How They Work.' Illumin - Volume XIII Issue III. N.p., n.d. Web. 16 Dec. 2012. <http://illumin.usc.edu/printer/114/catch-a-wave-radio-waves-and-how-they-work/>.</li><li>pigments, which. 'Biology 205 :: Photosynthesis.' South Carolina Department of Natural Resources. N.p., n.d. Web. 16 Dec. 2012. <http://www.dnr.sc.gov/ael/personals/pjpb/lecture/lecture.html>.</li><li>'How is data put on radio waves?.' Welcome to QRG. N.p., n.d. Web. 16 Dec. 2012. <http://www.qrg.northwestern.edu/projects/vss/docs/communications/1-how-is-data-put-on-radio-waves.html>.</li></ul></p>";
+};
+function closeSeeMore(){
+	$("#close").css({"display":"none"});
+	$("#blocker").css({"display":"none"});
+};
+</script>
+</body></html>

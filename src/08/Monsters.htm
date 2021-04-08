@@ -1,0 +1,271 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Fractals</title>
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+<style>
+<!--
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+body {
+  font-family: Times New Roman;
+  
+  font-size: 12.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+h2 { font-size: 14pt }
+-->
+</style>
+</head>
+
+<body bgcolor="#C0C0C0" onload="FP_preloadImgs(/*url*/'button2.jpg', /*url*/'button3.jpg', /*url*/'button10.jpg', /*url*/'button11.jpg', /*url*/'button13.jpg', /*url*/'button14.jpg', /*url*/'button16.jpg', /*url*/'button17.jpg')" style="background-color: #000000" background="Background2.jpg">
+<p>&nbsp;</p>
+<div align="center">
+	<table border="2" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" width="800" height="1969" bordercolorlight="#FF0000">
+		<!-- MSTableType="layout" -->
+		<tr>
+			<td valign="top" bgcolor="#C0C0C0" colspan="3" height="75" background="TopBar.jpg">
+			<!-- MSCellType="ContentHead" -->
+			<p align="center"><font face="Arial Black" size="7" color="#FFFFFF">
+Monsters</font></td>
+		</tr>
+		<tr>
+			<td valign="top" width="100">
+			<!-- MSCellType="NavBody" -->
+			&nbsp;<p><a href="Index.htm">
+			<img border="0" id="img2" src="button1.jpg" height="20" width="100" alt="Fractal Geometry" fp-style="fp-btn: Border Left 6; fp-font-size: 8" fp-title="Fractal Geometry" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'button2.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'button1.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button3.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'button2.jpg')"></a></p>
+			<p>
+			<img border="0" src="MonstersButton.jpg" width="100" height="20"></p>
+			<p><a href="Mandelbrot.htm">
+			<img border="0" id="img4" src="button7.jpg" height="20" width="100" alt="Mandelbrot" fp-style="fp-btn: Border Left 6" fp-title="Mandelbrot" onmouseover="FP_swapImg(1,0,/*id*/'img4',/*url*/'button10.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img4',/*url*/'button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img4',/*url*/'button11.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img4',/*url*/'button10.jpg')"></a><p>
+			<a href="Math.htm">
+			<img border="0" id="img5" src="button12.jpg" height="20" width="100" alt="Math" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button13.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button12.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button14.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button13.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Math"></a><p>
+			<a href="Importance.htm">
+			<img border="0" id="img6" src="button15.jpg" height="20" width="100" alt="Importance" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button16.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button15.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button17.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button16.jpg')" fp-style="fp-btn: Border Left 6" fp-title="Importance"></a><p>
+			&nbsp;</td>
+			<td valign="top" width="582" bordercolor="#FF0000">
+			<!-- MSCellType="ContentBody" -->
+			<blockquote>
+<p align="center">&nbsp;</p>
+<p align="left"><sup><span style="FONT-FAMILY: 'Arial'">
+Before fractal geometry was actually made into a kind of math we 
+had been realizing that nature behaves differently than geometry wants it to. 
+Mathematicians drew strange shapes that geometry could not explain. Listed are 
+some of these shapes and people who studied mathematics that “broke the rules.”</span></sup></p>
+<table border="0" width="90%">
+	<tr>
+		<td width="269">
+<p align="center"><font face="Arial">
+<img border="0" src="Cantor-Annimation.gif" width="260" height="126" align="left"></font></td>
+		<td>
+		<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+			<sup goog_docs_charIndex="61">
+			<p style="MARGIN: 0pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify">
+			<span style="FONT-FAMILY: 'Arial'; BACKGROUND-COLOR: #ffffff">
+			&nbsp;</span><sup goog_docs_charIndex="61"><b><span style="FONT-FAMILY: 'Arial'">Cantor 
+			Dust</span><font face="Arial"> </font></b></p>
+			<p style="MARGIN: 0pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify">
+			<span style="FONT-FAMILY: 'Arial'; BACKGROUND-COLOR: #ffffff">
+			This was the first of the monsters. Henry Smith 
+			discovered it in 1875, but Greog Cantor got it named after him. This 
+			was the first of the fractals. This “monster” took a line, cut it 
+			into three, and removed the middle third. Then it repeated on the 
+			two lines left over and the next four and so on. If you zoomed in on 
+			one of the small lines it would have the same branching pattern as 
+			the first.</span></p>
+			<p style="MARGIN: 0pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify">
+			<font face="Arial">&nbsp;</font></sup></sup></div>
+		</td>
+	</tr>
+	<tr>
+		<td width="269">
+<p align="center"><font face="Arial">
+<img border="0" src="PEANO%20SPACE.jpg" width="261" height="196" align="left"></font></td>
+		<td>
+		<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+			<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+				<sup goog_docs_charIndex="69"><sup goog_docs_charIndex="61">
+				<sup goog_docs_charIndex="69">
+				<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1030">
+				<span style="font-family: Arial; font-weight: 700" goog_docs_charIndex="1031">
+				<font goog_docs_charIndex="1033">The Peano Space</font></span><font face="Arial">
+				</font>
+				</p>
+				<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1054">
+				<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1055">
+				<font goog_docs_charIndex="1056">It was discovered in 
+				Giuseppe Peano in 1890. This squiggly line was a counterexample 
+				to the statement: Lines don’t take up space. The Peano Space was 
+				a space-filling curve. It filled every requirement for a curve, 
+				but it did something unusual. It visited every point on a graph, 
+				meaning it took up space.</font></span></p>
+				</sup></sup>
+				<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1763">
+				<font face="Arial">&nbsp;</font></sup></div>
+			<p>&nbsp;</div>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="269">
+		<p align="center">
+		<img border="0" src="Koch.gif" width="204" height="200" align="left"></td>
+		<td><sup goog_docs_charIndex="69">
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1372">
+		<b>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1373">
+		<font goog_docs_charIndex="1375">Koch Curve/ Snowflake</font></span><font face="Arial">
+		</font></b></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1402">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1403">
+		<font goog_docs_charIndex="1404">Helge von Koch discovered this 
+		monster in 1904. This fractal was also a curve. It took a line and put a 
+		triangle in the center. Then on each section it added another triangle, 
+		and then it repeated. This meant that the curve had an infinite measure. 
+		It could be infinitely long and is infinitely precise.</font></span></p>
+		</sup>&nbsp;</td>
+	</tr>
+	<tr>
+		<td width="269">
+<p align="center">
+<font face="Arial">
+<img border="0" src="Seirpinski.gif" width="180" height="167" align="left"></font></td>
+		<td><sup goog_docs_charIndex="69">
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1733">
+		<b>
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1734">
+		<font goog_docs_charIndex="1736">The Sierpinski Gasket</font></span><font face="Arial">
+		</font></b></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1763">
+		<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1764">
+		<font goog_docs_charIndex="1765">Vaclav Sierpinski discovered 
+		the Sierpinski Gasket in 1916. It took an equilateral triangle and drew 
+		an upside down triangle in the center. Then on the three smaller 
+		equilateral triangles the step repeated. If you zoomed in on the 
+		triangle it would exactly the same as the first part. A special property 
+		about the Sierpinski Gasket is that it could be made with the Pascal’s 
+		Triangle. If you shaded the odd numbers in on the triangle, the 
+		Sierpinski Gasket’s pattern appears. </font></span></p>
+		<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1763">&nbsp;</p>
+		</sup>
+		<p>&nbsp;</td>
+	</tr>
+</table>
+			<p align="justify"><sup goog_docs_charIndex="69">
+			<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1410">
+			<font goog_docs_charIndex="1411">Each of these “monsters” 
+			set the definition of fractal and got the ball rolling for fractal 
+			geometry. Mathematicians did not approve of these shapes. They were 
+			not smooth like most shapes they were used to. They considered these 
+			shapes just to be drawings, nothing mathematical. </font></span>
+			</sup></p>
+<div goog_docs_charIndex="1" style="margin-top: 0px; margin-bottom: 0px">
+	<sup goog_docs_charIndex="69">
+	<h2 style="MARGIN: 0pt; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: justify" goog_docs_charIndex="1420">
+	<span style="font-style: normal; font-family: Arial; background-color: #ffffff" goog_docs_charIndex="1421">
+	<font goog_docs_charIndex="1423" size="3">Gaston Julia</font></span></h2>
+	<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1440">
+	<span style="FONT-FAMILY: 'Arial'" goog_docs_charIndex="1441">
+	<font goog_docs_charIndex="1442">He studied the complex plane and 
+	how it works. Julia was interested in what happens when you take a number 
+	and put it into a formula, then take the number you get out and put it back 
+	in again. Julia made many different formulas, but he would never see what 
+	they looked like when graphed.</font></span><p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1440">
+	&nbsp;<p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1440">
+	<font class="Apple-style-span" face="Arial">
+	<span style="font-weight: 700; background-color: #FFFFFF">Poincaré</span></font><p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1440">
+	<font face="'Times New Roman', sans-serif">
+	<span style="color: rgb(0,0,0); font-family: Arial">1884 the King 
+	of Sweden and Norway, Oscar II, asked a Swedish professor to&nbsp;organize&nbsp;a 
+	math&nbsp;competition. The goal was to prove that planets follow cycles. Poincaré 
+	participated in this competition. He proved that three planets will always 
+	follow a cycle, and he won the prize. However he realized that he made a 
+	mistake and that planets may not follow cycles. He then made formulas that 
+	created strange, seemingly unpredictable patterns. This is when &quot;chaos&quot; was 
+	found.</span></font><p style="MARGIN: 0pt; TEXT-ALIGN: justify" goog_docs_charIndex="1440">
+	&nbsp;<p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="1440">
+	<img border="0" src="Poincare.gif" width="259" height="130"><p style="MARGIN: 0pt; TEXT-ALIGN: center" goog_docs_charIndex="1440">
+	<font face="Arial">This is an animation of a graph describing chaos.</font></sup></div>
+			</blockquote>
+			</td>
+			<td valign="top" height="1840" width="108">
+			<!-- MSCellType="NavBody2" -->
+			&nbsp;<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="3" height="50" background="TopBar.jpg">
+			<!-- MSCellType="ContentFoot" -->
+			&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>
